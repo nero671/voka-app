@@ -1,0 +1,262 @@
+#content {
+  display: flex;
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+}
+
+#content::before {
+  content: '';
+  background-color: #f8f7f8;
+  width: 50%;
+  display: flex;
+  height: 54%;
+  position: absolute;
+  z-index: -1;
+}
+
+.content {
+  background-color: #f8f7f8;
+  width: 54%;
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.content-item {
+  margin-bottom: 34px;
+  cursor: pointer;
+}
+
+.content-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 124.7%;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.content-item.active > .content-title {
+  color: #083ab3;
+}
+
+.sub-content {
+  // height: 0;
+  // overflow: hidden;
+  display: none;
+  transition: 0.35s;
+  position: absolute;
+  width: 550px;
+  right: -80px;
+  top: 70px;
+}
+
+.sub-content.active {
+  // height: auto;
+  display: block;
+  transition: 0.35s;
+  padding-bottom: 50px;
+}
+
+.sub-content__description {
+  height: 0;
+  overflow: hidden;
+  transition: 0.35s;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #717171;
+  margin-left: 30px;
+  margin-top: 16px;
+}
+
+.sub-content__description.active {
+  height: auto;
+  transition: 0.35s;
+  margin-bottom: 40px;
+}
+
+.content-title::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: url('../images/playPrefix.svg');
+  margin-right: 24px;
+}
+
+.content-title.active {
+  color: #083ab3;
+  pointer-events: none;
+}
+
+.tab-block__img {
+  margin-top: 15px;
+}
+
+.sub-content__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #000;
+  display: flex;
+  padding-left: 30px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.sub-content__title.active {
+  color: #083ab3;
+}
+
+.sub-content__title::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/fillArrow.svg');
+  display: block;
+  position: absolute;
+  left: 0;
+  transition: 0.35s;
+}
+
+.sub-content__title.active::before {
+  transform: rotate(90deg);
+  transition: 0.35s;
+}
+
+@media (max-width: 1580px) {
+  .content {
+    width: 41%;
+  }
+
+  .sub-content {
+    right: 80px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .sub-content {
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  #content::before {
+    width: 100%;
+  }
+
+  #content {
+    background-color: #f8f7f8;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content-title::after {
+    content: '';
+    height: 18px;
+    width: 18px;
+    background: url('../images/mobileCross.svg') no-repeat center top / cover;
+    display: flex;
+    margin-left: auto;
+    transition: 0.35s;
+  }
+
+  .content-title.active::after {
+    transform: rotate(45deg);
+    transition: 0.35s;
+  }
+
+  .sub-content__title.active::before {
+    transform: rotate(270deg);
+    transition: 0.35s;
+  }
+
+  .sub-content {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .sub-content__title {
+    margin-bottom: 10px;
+    padding-left: 0;
+    padding-right: 35px;
+  }
+
+  .sub-content__description {
+    margin-left: 0;
+  }
+
+  .sub-content__description.active {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .sub-content__title::before {
+    transform: rotate(90deg);
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding-top: 40px;
+  }
+
+  .content-item {
+    margin-bottom: 24px;
+  }
+
+  .content-title {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .sub-content__description {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .sub-content__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  #content {
+    margin-top: -180px;
+  }
+}
+
+@media (max-width: 395px) {
+  #support {
+    background: url(../images/mobile-bg.svg) no-repeat center /contain;
+  }
+
+  #content {
+    margin-top: -230px;
+  }
+}
+
+@media (min-width: 991px) {
+  .content-title:hover {
+    color: #083ab3;
+  }
+
+  .sub-content__title:hover {
+    color: #083ab3;
+  }
+}

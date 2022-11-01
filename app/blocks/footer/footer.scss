@@ -1,0 +1,121 @@
+#footer {
+  background: url('../images/footer-bg.png') no-repeat center top / cover;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 78px;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: 0.025em;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.footer-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.footer-phone {
+  position: relative;
+}
+
+.footer-phone__info {
+  position: absolute;
+  left: 55px;
+  top: 90px;
+}
+
+.footer-link {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.footer-link__phone::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: url('../images/phone.svg') no-repeat;
+  display: flex;
+  margin-right: 20px;
+}
+
+.footer-link__mail::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: url('../images/letter.svg') no-repeat;
+  display: flex;
+  margin-right: 20px;
+}
+
+.footer-phone__info-item:last-child {
+  margin-top: 50px;
+}
+
+.footer-link__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    padding-top: 34px;
+  }
+
+  .footer-title {
+    margin-top: 0;
+  }
+
+  .footer-phone:last-child {
+    margin: 0 auto;
+    padding-top: 34px;
+  }
+
+  .footer-phone__info {
+    top: 135px;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer {
+    background: url('../images/footer-mob-bg.png') no-repeat center top / cover;
+  }
+
+  .footer-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.025em;
+  }
+
+  .footer-subtitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    margin-top: 16px;
+  }
+}
